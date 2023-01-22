@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <!-- include the stylesheet file -->
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+  </head>
+  <body>
+    <h1 id="group_name">It's Enkanomiyaa :p</h1>
+    <div class="login">
+      <h1 id="login_text">Login</h1>
+    
+    
+      <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+      <h6 id="error_msg"><%= error.message %></h6>
+      <% }) %> <% } %>
+    
+
+    
+      <% if(messages.success_msg) { %>
+      <h6 id="error_msg"><%= messages.success_msg %></h6>
+      <% } %>
+   
+
+    
+      <% if (messages.error) { %>
+      <h6 id="error_msg"><%= messages.error %></h6>
+      <% } %>
+    
+
+    <form action="/" method="POST">
+      <div>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div>
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
